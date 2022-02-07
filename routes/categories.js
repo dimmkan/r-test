@@ -3,7 +3,7 @@ const categoriesController = require('../controllers/categories');
 const {body, validationResult} = require('express-validator');
 
 router.get('/heartbeat', (req, res) => {
-    res.status(200).json({message:'Heart beat!'});
+    return res.status(200).json({message:'Heart beat!'});
 })
 
 //Получение списка категорий
