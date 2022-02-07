@@ -7,7 +7,7 @@ const goodsRouter = require('./routes/goods');
 const app = express();
 const  LISTEN_PORT = 3003;
 
-app.use(cors());
+app.use(cors);
 app.options('*', cors);
 app.use(express.json());
 app.use('/api/categories', categoriesRouter);
