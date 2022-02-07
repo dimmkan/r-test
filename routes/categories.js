@@ -2,10 +2,6 @@ const router = require('express').Router();
 const categoriesController = require('../controllers/categories');
 const {body, validationResult} = require('express-validator');
 
-router.get('/heartbeat', (req, res) => {
-    return res.status(200).json({message:'Heart beat!'});
-})
-
 //Получение списка категорий
 router.get('/', async (req, res) => {
     try {
