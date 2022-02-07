@@ -1,10 +1,10 @@
 const knex_base = require('knex')({
     client: 'pg',
     connection: {
-        host : '127.0.0.1',
-        user : 'postgres',
-        password : '123',
-        database : 'rarus',
+        host : process.env.DB_HOST,
+        user : process.env.POSTGRES_USER,
+        password : process.env.POSTGRES_PASSWORD,
+        database : process.env.POSTGRES_DB,
         port: 5432
     },
     useNullAsDefault: true

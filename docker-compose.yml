@@ -17,11 +17,14 @@ services:
     image: rarus.app:latest
     container_name: rarus.app
     depends_on:
-      - mysqldb
+      - postgres
     environment:
-      DB_HOST: mysqldb
+      DB_HOST: postgres
+      POSTGRES_DB: 'rarus'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: '123'
     restart: always
     links:
-      - mysqldb
+      - postgres
     ports:
-      - 3000:3000
+      - 3003:3003
