@@ -28,7 +28,7 @@ class CategoriesController {
                         message: 'Internal server error'
                     });
                 }
-                res.status(200).json(result.rows !== undefined ? result.rows : []);
+                res.status(200).json(result !== undefined ? result.rows : []);
             });
         } catch (e) {
             console.log(e)
