@@ -131,20 +131,21 @@ INSERT INTO public.goods VALUES (3, 3, 'Товар 1', 50, 1);
 INSERT INTO public.goods VALUES (4, 3, 'Товар 2', 20, 1);
 INSERT INTO public.goods VALUES (5, 5, 'Товар 3', 100, 1);
 INSERT INTO public.goods VALUES (2, 13, 'Товар 2', 10, 1);
+INSERT INTO public.goods VALUES (6, 4, 'Новый товар (изменение)', 200, 1);
 
 
 --
 -- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.categories_id_seq', 14, true);
+SELECT pg_catalog.setval('public.categories_id_seq', 17, true);
 
 
 --
 -- Name: goods_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.goods_id_seq', 5, true);
+SELECT pg_catalog.setval('public.goods_id_seq', 9, true);
 
 
 --
