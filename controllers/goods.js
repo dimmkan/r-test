@@ -81,7 +81,7 @@ class GoodsController {
                         message: 'Internal server error'
                     });
                 }
-                if(result.rows){
+                if(result){
                     res.status(200).json(result.rows);
                 }else{
                     res.status(200).json([]);
