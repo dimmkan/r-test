@@ -81,7 +81,8 @@ class GoodsController {
                         message: 'Internal server error'
                     });
                 }
-                    res.status(200).json(result.rows !== undefined ? result.rows : []);
+                console.log(result);
+                res.status(200).json(result.rows !== undefined ? result.rows : []);
             });
         } catch (e) {
             console.log(e)
