@@ -16,8 +16,8 @@ router.get('/', async (req, res) => {
 
 //Добавление категории
 router.post('/add',
-    body('name').isString().isLength({min: 1}),
-    body('active').isNumeric().isLength({max: 1}),
+    body('name').isString().trim().isLength({min: 1}),
+    body('active').isInt({min: 0, max: 1}).isLength({max: 1}),
     async (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -28,8 +28,8 @@ router.post('/add',
 
 //Изменение категории
 router.put('/update/:id',
-    body('name').isString().isLength({min: 1}),
-    body('active').isNumeric().isLength({max: 1}), async (req, res) => {
+    body('name').isString().trim().isLength({min: 1}),
+    body('active').isInt({min: 0, max: 1}).isLength({max: 1}), async (req, res) => {
         await categoriesController.updateCategory(req, res);
     })
 

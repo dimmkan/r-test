@@ -65,8 +65,8 @@ CREATE TABLE public.goods (
     id integer NOT NULL,
     category_id integer NOT NULL,
     name text NOT NULL,
-    active boolean NOT NULL,
-    count bigint DEFAULT 0 NOT NULL
+    count bigint DEFAULT 0 NOT NULL,
+    active smallint DEFAULT 1 NOT NULL
 );
 
 
@@ -117,26 +117,27 @@ INSERT INTO public.categories VALUES (3, 1, 'Подчиненная катего
 INSERT INTO public.categories VALUES (4, 1, 'Подчиненная категория 2', 0, 2);
 INSERT INTO public.categories VALUES (6, 3, 'Подчиненная категория 4', 1, 3);
 INSERT INTO public.categories VALUES (5, 3, 'Подчиненная категория 3', 1, 3);
-INSERT INTO public.categories VALUES (7, NULL, 'Подчиненная категория 7', 1, 2);
-INSERT INTO public.categories VALUES (13, NULL, 'New category (update 3)', 1, 2);
+INSERT INTO public.categories VALUES (14, NULL, 'Родительская категория 2', 1, 1);
+INSERT INTO public.categories VALUES (13, 14, 'New category (update 3)', 1, 2);
+INSERT INTO public.categories VALUES (7, 14, 'Подчиненная категория 7', 1, 2);
 
 
 --
 -- Data for Name: goods; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.goods VALUES (1, 1, 'Товар 1', true, 10);
-INSERT INTO public.goods VALUES (3, 3, 'Товар 1', true, 50);
-INSERT INTO public.goods VALUES (4, 3, 'Товар 2', true, 20);
-INSERT INTO public.goods VALUES (5, 5, 'Товар 3', true, 100);
-INSERT INTO public.goods VALUES (2, 13, 'Товар 2', true, 10);
+INSERT INTO public.goods VALUES (1, 1, 'Товар 1', 10, 1);
+INSERT INTO public.goods VALUES (3, 3, 'Товар 1', 50, 1);
+INSERT INTO public.goods VALUES (4, 3, 'Товар 2', 20, 1);
+INSERT INTO public.goods VALUES (5, 5, 'Товар 3', 100, 1);
+INSERT INTO public.goods VALUES (2, 13, 'Товар 2', 10, 1);
 
 
 --
 -- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.categories_id_seq', 13, true);
+SELECT pg_catalog.setval('public.categories_id_seq', 14, true);
 
 
 --
