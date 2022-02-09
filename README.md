@@ -4,7 +4,7 @@ ____
 Для запуска необходимо выполнить следующие команды на вашей виртуальной машине с Linux:
 1. Скопировать репозиторий:
 
-`git clone https://github.com/dimmkan/r-test`
+`git clone https://github.com/dimmkan/r-test.git`
 
 2. Собрать Docker-образ:
 
