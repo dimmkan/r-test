@@ -24,7 +24,7 @@ class CategoriesController {
             pg.query(query, [], (err, result) => {
                 if (err) {
                     console.log(err);
-                    res.status(500).json({
+                    return res.status(500).json({
                         message: 'Internal server error'
                     });
                 }

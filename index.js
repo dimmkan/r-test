@@ -8,7 +8,7 @@ const swaggerDocument = require('./openapi.json');
 
 
 const app = express();
-const  LISTEN_PORT = 3003;
+const  LISTEN_PORT = process.env.LISTEN_PORT || 3003;
 
 app.use(cors());
 app.options('*', cors);

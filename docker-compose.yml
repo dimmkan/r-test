@@ -23,6 +23,7 @@ services:
       POSTGRES_DB: 'rarus'
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: '123'
+      LISTEN_PORT: 3003
     restart: always
     links:
       - postgres
