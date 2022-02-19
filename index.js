@@ -8,5 +8,4 @@ function start(){
         console.log(e)
     }
 }
-
 start();
